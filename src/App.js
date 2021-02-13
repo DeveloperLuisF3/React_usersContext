@@ -7,11 +7,21 @@ import UserList from "./components/UserList";
 // context
 import UserState from "./context/Users/UserState";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+
 export default function App() {
   return (
     <UserState>
-      <UserList />
-      <Profile />
+      <div className="container p-4">
+        <div className="row">
+          <div className="col-md-7">
+            <UserList />
+          </div>
+          <div className="col-md-5">
+            <Profile />
+          </div>
+        </div>
+      </div>
     </UserState>
   );
 }
